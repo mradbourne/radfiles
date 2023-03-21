@@ -1,0 +1,11 @@
+stow cheat
+stow editorconfig
+stow git
+stow gnu-readline
+stow jetbrains
+stow kitty
+stow nvim
+stow redshift
+stow tmux
+stow vscode
+stow zsh

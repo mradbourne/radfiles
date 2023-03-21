@@ -1,0 +1,45 @@
+fzf-git-branch() {
+    git rev-parse HEAD >/dev/null 2>&1 || return
+
+    git branch --color=always --all --sort=-committerdate |
+        grep -v HEAD |
+        fzf --ansi |
+        sed "s/.* //"
+}
+
+fzf-git-checkout() {
+    git rev-parse HEAD >/dev/null 2>&1 || return
+
+    local branch
+    branch=$(fzf-git-branch)
+
+    if [[ "$branch" = "" ]]; then
+        echo "No branch selected."
+        return
+    fi
+
+    if [[ "$branch" = 'remotes/'* ]]; then
+        git checkout --track $branch
+    else
+        git checkout $branch
+    fi
+}
+
+fzf-git-stash-list() {
+    git stash list "$@" |
+    fzf --preview="echo {} | cut -d':' -f1 | xargs git stash show --name-only" --preview-window=up
+}
+
+fzf-git-stash-pop() {
+    local stash
+    stash=$(fzf-git-stash-list)
+
+    if [[ "$stash" = "" ]]; then
+        echo "No stash selected."
+        return
+    fi
+
+    stash=$(echo "$stash" | sed 's/:.*//')
+
+    git stash pop $stash
+}

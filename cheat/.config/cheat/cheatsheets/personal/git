@@ -1,0 +1,10 @@
+# Unstage
+git reset HEAD
+
+# Undo commit
+git reset --soft HEAD^
+
+# Delete branch
+git branch -d <local-branch>
+git branch -D <local-branch>
+git push origin --delete <remote-branch-name>

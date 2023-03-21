@@ -1,0 +1,5 @@
+# Add ~/bin
+export PATH="$HOME/bin:$PATH"
+
+# Used by pip install --user (e.g. for pipenv)
+export PATH="$HOME/.local/bin:$PATH"

@@ -1,0 +1,100 @@
+// https://code.visualstudio.com/api/references/commands
+// https://code.visualstudio.com/api/references/when-clause-contexts
+[
+    /**
+    * File navigation
+    */
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForward",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.openPreviousRecentlyUsedEditor",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.openNextRecentlyUsedEditor",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    /**
+    * Panel navigation
+    */
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands",
+    },
+    {
+        "key": "f1",
+        // "command": "git.openFile",
+        "command": "gitlens.openWorkingFile",
+        "when": "sideBarFocus || isInDiffEditor"
+    },
+    {
+        "key": "-",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "enter",
+        "command": "search.action.focusSearchList",
+        "when": "searchInputBoxFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "f2",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "notifications.clearAll"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.test"
+    },
+    /**
+    * Telescope
+    */
+    {
+        "key": "space f",
+        "command": "workbench.action.quickOpen",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+    },
+    {
+        "key": "space b",
+        "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+    },
+    {
+        "key": "space g",
+        "command": "workbench.action.findInFiles",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+    },
+    {
+        "key": "space s",
+        "command": "workbench.action.showAllSymbols",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+    },
+]

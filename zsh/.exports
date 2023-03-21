@@ -1,0 +1,17 @@
+export EDITOR="nvim"
+export GIT_EDITOR=$EDITOR
+
+# Configure less pager
+export LESS="--no-init --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --tabs=4"
+
+# PostgreSQL
+export PGUSER=postgres
+export PGPASSWORD=postgres
+export PGHOST=localhost
+
+# Create pipenv venv in project directory
+export PIPENV_VENV_IN_PROJECT=true
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
