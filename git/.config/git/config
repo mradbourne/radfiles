@@ -1,7 +1,6 @@
 [alias]
 
-l = log --oneline
-ll = log --graph --decorate --oneline
+l = log --graph --decorate --oneline
 la = log --graph --decorate --oneline --all
 
 # View the current working tree status using the short format
