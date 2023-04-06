@@ -2,29 +2,6 @@
 // https://code.visualstudio.com/api/references/when-clause-contexts
 [
     /**
-    * File navigation
-    */
-    {
-        "key": "ctrl+o",
-        "command": "workbench.action.navigateBack",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "workbench.action.navigateForward",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+shift+o",
-        "command": "workbench.action.openPreviousRecentlyUsedEditor",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "workbench.action.openNextRecentlyUsedEditor",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-    /**
     * Panel navigation
     */
     {
@@ -41,11 +18,6 @@
         // "command": "git.openFile",
         "command": "gitlens.openWorkingFile",
         "when": "sideBarFocus || isInDiffEditor"
-    },
-    {
-        "key": "-",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "enter",
@@ -74,27 +46,15 @@
         "key": "ctrl+shift+t",
         "command": "workbench.action.tasks.test"
     },
-    /**
-    * Telescope
-    */
+    // Fix for Windows
     {
-        "key": "space f",
-        "command": "workbench.action.quickOpen",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
     },
     {
-        "key": "space b",
-        "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
-    },
-    {
-        "key": "space g",
-        "command": "workbench.action.findInFiles",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
-    },
-    {
-        "key": "space s",
-        "command": "workbench.action.showAllSymbols",
-        "when": "editorFocus && vim.active && vim.mode != 'Insert' || vim.active && !inputFocus"
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
     },
 ]
