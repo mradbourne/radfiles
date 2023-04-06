@@ -3,9 +3,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- nvim-tree keymaps
-vim.keymap.set('n', '-', require("nvim-tree").open_replacing_current_buffer)
-
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>e', require('telescope.builtin').oldfiles)

@@ -1,7 +1,3 @@
--- Disable netrw because I'm using nvim-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.wo.number = true
 vim.wo.signcolumn = 'yes'
 vim.wo.wrap = false
