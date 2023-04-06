@@ -8,8 +8,10 @@ vim.keymap.set('n', '-', ':NvimTreeFocus<CR>')
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>e', require('telescope.builtin').oldfiles)
-vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
-vim.keymap.set('n', '<leader>g', require('telescope.builtin').current_buffer_fuzzy_find)
+vim.keymap.set('n', '<leader>f', function()
+  require('telescope.builtin').find_files{ hidden=true }
+end)
+vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
