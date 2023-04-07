@@ -22,7 +22,7 @@ c = clone --recursive
 ca = !git add -A && git commit -av
 
 # Commit with message
-cm = commit -m
+cm = commit
 
 # Switch to a branch
 co = checkout
