@@ -1,15 +1,21 @@
+local tel = require('telescope.builtin')
+
 -- Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Activity keymaps
+vim.keymap.set('n', '<leader>ae', vim.cmd.Ex)
+
 -- Telescope keymaps
-vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>e', require('telescope.builtin').oldfiles)
-vim.keymap.set('n', '<leader>f', function()
-  require('telescope.builtin').find_files{ hidden=true }
+vim.keymap.set('n', '<leader>b', tel.buffers)
+vim.keymap.set('n', '<leader>e', tel.oldfiles)
+vim.keymap.set('n', '<leader>pf', function()
+  tel.find_files{ hidden=true }
 end)
-vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>f', tel.git_files)
+vim.keymap.set('n', '<leader>g', tel.live_grep)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
