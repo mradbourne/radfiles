@@ -30,6 +30,11 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
+        "key": "enter",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+    },
+    {
         "key": "f2",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
