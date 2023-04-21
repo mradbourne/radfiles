@@ -73,7 +73,7 @@
   "debug.toolBarLocation": "docked",
   "workbench.startupEditor": "none",
   "workbench.list.openMode": "doubleClick",
-  "editor.cursorSurroundingLines": 8,
+  "editor.cursorSurroundingLines": 12,
   /**
   * File formatting
   */
