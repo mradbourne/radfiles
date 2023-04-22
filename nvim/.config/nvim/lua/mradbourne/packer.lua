@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | Packer
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use 'tpope/vim-vinegar'
+  use 'nvim-tree/nvim-tree.lua'
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',

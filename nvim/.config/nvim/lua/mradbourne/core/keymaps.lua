@@ -7,6 +7,7 @@ vim.g.maplocalleader = ' '
 
 -- Activity keymaps
 vim.keymap.set('n', '<leader>ae', vim.cmd.Ex)
+vim.keymap.set('n', '-', ':NvimTreeOpen<cr>')
 
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>b', tel.buffers)
