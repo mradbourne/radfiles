@@ -269,38 +269,10 @@
     // Window management
     {
       "before": [
-        "ctrl+w",
-        "h"
+        "ctrl+o"
       ],
       "commands": [
-        "workbench.action.focusLeftGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+w",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.focusRightGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+w",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.focusAboveGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+w",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.focusBelowGroup"
+        "workbench.action.navigateBack"
       ]
     },
     {
@@ -402,14 +374,6 @@
         "editor.action.showHover"
       ]
     },
-    {
-      "before": [
-        "ctrl+k",
-      ],
-      "commands": [
-        "editor.action.showDefinitionPreviewHover"
-      ]
-    },
     // Telescope
     {
       "before": [
@@ -432,15 +396,6 @@
     {
       "before": [
         "<leader>",
-        "e"
-      ],
-      "commands": [
-        "workbench.action.openPreviousEditorFromHistory"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
         "g"
       ],
       "commands": [
@@ -454,6 +409,23 @@
       ],
       "commands": [
         "workbench.action.showAllSymbols"
+      ]
+    },
+    // Misc
+    {
+      "before": [
+        "ctrl+k",
+      ],
+      "commands": [
+        "workbench.action.openPreviousRecentlyUsedEditor"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+j",
+      ],
+      "commands": [
+        "workbench.action.openNextRecentlyUsedEditor"
       ]
     },
   ],
