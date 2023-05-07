@@ -269,14 +269,6 @@
     // Window management
     {
       "before": [
-        "ctrl+o"
-      ],
-      "commands": [
-        "workbench.action.navigateBack"
-      ]
-    },
-    {
-      "before": [
         "ctrl+m",
         "h"
       ],
