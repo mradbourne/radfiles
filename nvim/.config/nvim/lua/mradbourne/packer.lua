@@ -5,12 +5,16 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerCompile', group = packer_group, pattern = 'init.lua' })
+vim.api.nvim_create_autocmd('BufWritePost',
+  { command = 'source <afile> | PackerCompile', group = packer_group, pattern = 'init.lua' })
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use 'nvim-tree/nvim-tree.lua'
+  use 'preservim/nerdtree'
+
+  use 'ryanoasis/vim-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -50,6 +54,6 @@ require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 
   use 'tomasiser/vim-code-dark' -- The only theme that matters
-  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
-  use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
+  use 'numToStr/Comment.nvim'   -- "gc" to comment visual regions/lines
+  use 'tpope/vim-sleuth'        -- Detect tabstop and shiftwidth automatically
 end)

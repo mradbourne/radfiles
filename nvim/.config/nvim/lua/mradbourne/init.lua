@@ -7,7 +7,7 @@ require('mradbourne.core.keymaps')
 require('mradbourne.core.options')
 
 -- Plugins
-require('mradbourne.plugins.nvim-tree')
+require('mradbourne.plugins.nerdtree')
 require('mradbourne.plugins.comment')
 require('mradbourne.plugins.gitsigns')
 require('mradbourne.plugins.mason')
