@@ -11,10 +11,15 @@ vim.api.nvim_create_autocmd('BufWritePost',
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use 'preservim/nerdtree'
-
-  use 'ryanoasis/vim-devicons'
-  use 'nvim-tree/nvim-web-devicons'
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  }
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',

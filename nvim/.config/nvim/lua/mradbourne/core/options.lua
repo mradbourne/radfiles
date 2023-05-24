@@ -29,3 +29,6 @@ vim.bo.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+
+-- Neotree: Unless you are still migrating, remove the deprecated commands from v1.x
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
