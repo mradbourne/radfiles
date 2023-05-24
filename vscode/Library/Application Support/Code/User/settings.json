@@ -44,7 +44,6 @@
   /**
   * GUI
   */
-  "workbench.colorTheme": "Default Dark+ Experimental",
   "editor.minimap.enabled": false,
   "editor.codeLens": true,
   "editor.accessibilitySupport": "off",
@@ -102,6 +101,7 @@
   "gitlens.statusBar.enabled": true,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
+  "gitlens.graph.layout": "panel",
   "gitlens.codeLens.enabled": false,
   "gitlens.defaultGravatarsStyle": "identicon",
   "gitlens.views.repositories.showBranchComparison": false,
