@@ -33,6 +33,12 @@ b = !git -P branch --sort="committerdate"
 # Switch to a branch, creating it if necessary
 go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+# Stash all files to a custom stash name based on the branch
+st = "!s() { stash_name=quicksave-$(git symbolic-ref --short HEAD); git stash save --all $stash_name; }; s"
+
+# Apply latest branch stash
+sta = "!s() { stash_name=quicksave-$(git symbolic-ref --short HEAD); git stash apply stash^{/$stash_name}; }; s"
+
 # Show verbose output about tags, branches or remotes
 tags = tag -l
 branches = branch -a
