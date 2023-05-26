@@ -10,13 +10,10 @@ vim.keymap.set('n', '<leader>ae', vim.cmd.Ex)
 vim.keymap.set('n', '-', ':Neotree<cr>')
 
 -- Telescope keymaps
+vim.keymap.set('n', '<Tab>', tel.oldfiles)
+vim.keymap.set('n', '<C-p>', tel.git_files)
+vim.keymap.set('n', '<C-f>', tel.live_grep)
 vim.keymap.set('n', '<leader>b', tel.buffers)
-vim.keymap.set('n', '<leader>e', tel.oldfiles)
-vim.keymap.set('n', '<leader>pf', function()
-  tel.find_files { hidden = true }
-end)
-vim.keymap.set('n', '<leader>f', tel.git_files)
-vim.keymap.set('n', '<leader>g', tel.live_grep)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
