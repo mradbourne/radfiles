@@ -13,6 +13,10 @@ vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.o.completeopt = 'menuone,noselect'
 
+-- Windowing
+vim.o.splitbelow = true
+vim.o.splitright = true
+
 -- Whitespace
 vim.opt.list = true
 vim.opt.listchars = {
