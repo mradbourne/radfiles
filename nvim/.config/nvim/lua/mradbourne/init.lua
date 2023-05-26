@@ -15,4 +15,3 @@ require('mradbourne.plugins.telescope')
 
 -- Utils
 require('mradbourne.utils.highlight-on-yank')
-require('mradbourne.utils.show-diagnostics')
