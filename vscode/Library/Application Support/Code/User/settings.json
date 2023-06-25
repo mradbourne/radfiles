@@ -181,14 +181,13 @@
   },
   // Python
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
   "[python]": {
     "editor.tabSize": 4,
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true
   },
   // Other languages
@@ -448,5 +447,5 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 1
-  },
+  }
 }
