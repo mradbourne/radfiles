@@ -37,10 +37,10 @@
   /**
   * Fonts
   */
-  "editor.fontSize": 14,
-  "editor.lineHeight": 18,
+  "editor.fontSize": 13,
+  "editor.lineHeight": 17,
   "editor.fontFamily": "JetBrains Mono, Cascadia Mono, Hack, Menlo, Consolas, Monospace",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 13,
   /**
   * GUI
   */
@@ -91,12 +91,16 @@
   "workbench.list.multiSelectModifier": "alt",
   "workbench.settings.editor": "json",
   "editor.suggestSelection": "first",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor",
+  },
   /**
   * Git
   */
   "diffEditor.renderSideBySide": false,
   "git.confirmSync": false,
   "git.suggestSmartCommit": false,
+  "git.openRepositoryInParentFolders": "never",
   "gitlens.hovers.enabled": false,
   "gitlens.statusBar.enabled": true,
   "gitlens.currentLine.enabled": false,
@@ -167,7 +171,8 @@
   */
   // JavaScript / TypeScript
   "js/ts.implicitProjectConfig.checkJs": true,
-  "javascript.validate.enable": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
   "javascript.autoClosingTags": false,
   "typescript.autoClosingTags": false,
   "[javascript]": {
@@ -447,5 +452,6 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 1
-  }
+  },
+  "code-runner.saveFileBeforeRun": true,
 }
