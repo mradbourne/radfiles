@@ -21,8 +21,6 @@ require('packer').startup(function(use)
     }
   }
 
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     requires = {
