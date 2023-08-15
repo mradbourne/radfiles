@@ -12,6 +12,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.o.completeopt = 'menuone,noselect'
+vim.o.scrolloff = 12
 
 -- Windowing
 vim.o.splitbelow = true
