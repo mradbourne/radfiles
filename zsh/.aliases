@@ -1,3 +1,6 @@
+# Go home
+alias sr="cd ~/source/repos/"
+
 # Shortcuts
 alias g="git"
 alias co="fzf-git-checkout"
