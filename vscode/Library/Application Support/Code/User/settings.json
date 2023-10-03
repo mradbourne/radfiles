@@ -37,10 +37,10 @@
   /**
   * Fonts
   */
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.lineHeight": 17,
   "editor.fontFamily": "JetBrains Mono, Cascadia Mono, Hack, Menlo, Consolas, Monospace",
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontSize": 14,
   /**
   * GUI
   */
