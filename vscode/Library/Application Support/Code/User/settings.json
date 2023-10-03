@@ -451,7 +451,8 @@
   "favorites.saveSeparated": true,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
-    "vscode.typescript-language-features": 1
+    "vscode.typescript-language-features": 1,
+    "asvetliakov.vscode-neovim": 1
   },
   "code-runner.saveFileBeforeRun": true,
 }
