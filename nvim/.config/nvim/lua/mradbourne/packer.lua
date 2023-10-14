@@ -51,4 +51,5 @@ require('packer').startup(function(use)
   use 'tomasiser/vim-code-dark' -- The only theme that matters
   use 'numToStr/Comment.nvim'   -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth'        -- Detect tabstop and shiftwidth automatically
+  use 'tpope/vim-vinegar'
 end)
