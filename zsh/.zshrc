@@ -1,5 +1,5 @@
 # Set prompt
-PS1='%F{5}%2~%f %# '
+PS1="%F{5}%2~%f %# "
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -19,20 +19,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # pyenv
 eval "$(pyenv init --path)"
 
-# Antidote - ZSH plugin manager
-# Clone if necessary.
-[[ -e ${ZDOTDIR:-~}/.antidote ]] ||
-    git clone https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
-
-# Source antidote.
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-
-# Initialize antidote's dynamic mode, which changes `antidote bundle`
-# from static mode.
-source <(antidote init)
-
-# Bundle plugins
-antidote bundle Aloxaf/fzf-tab
-antidote bundle zsh-users/zsh-syntax-highlighting
-
+# ZSH plugins
+for plugin_name in {zsh-syntax-highlighting,fzf-tab}; do
+    plugin_path=~/.config/zsh/plugins/$plugin_name/$plugin_name.plugin.zsh
+    [ -r "$plugin_path" ] && [ -f "$plugin_path" ] && source $plugin_path
+done
+unset plugin_name plugin_path
 # -------- End of intended content --------
