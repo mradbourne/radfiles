@@ -43,9 +43,6 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
-  -- Git related plugins
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-rhubarb' -- GitHub integration for Fugitive
   use 'lewis6991/gitsigns.nvim'
 
   use 'tomasiser/vim-code-dark' -- The only theme that matters
