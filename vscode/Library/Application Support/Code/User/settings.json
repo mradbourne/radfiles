@@ -91,9 +91,6 @@
   "workbench.list.multiSelectModifier": "alt",
   "workbench.settings.editor": "json",
   "editor.suggestSelection": "first",
-  "workbench.editorAssociations": {
-    "*.md": "vscode.markdown.preview.editor",
-  },
   /**
   * Git
   */
@@ -452,7 +449,12 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 1,
-    "asvetliakov.vscode-neovim": 1
   },
   "code-runner.saveFileBeforeRun": true,
+  "workbench.editor.showTabs": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 4,
+  "window.commandCenter": false,
+  "workbench.editor.empty.hint": "hidden",
+  "window.density.editorTabHeight": "compact",
 }
