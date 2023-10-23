@@ -55,7 +55,6 @@
     100
   ],
   "explorer.confirmDragAndDrop": false,
-  "workbench.editor.untitled.hint": "hidden",
   "editor.wordWrap": "off",
   "editor.renderLineHighlight": "none",
   "workbench.editor.enablePreview": true,
@@ -69,7 +68,7 @@
   "editor.quickSuggestionsDelay": 0,
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
-  "debug.toolBarLocation": "docked",
+  "debug.toolBarLocation": "commandCenter",
   "workbench.startupEditor": "none",
   "workbench.list.openMode": "doubleClick",
   "editor.cursorSurroundingLines": 12,
@@ -197,17 +196,6 @@
   "html.autoClosingTags": false,
   "less.validate": false,
   "scss.validate": false,
-  "[dart]": {
-    "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false,
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -445,16 +433,13 @@
   /**
   * Misc plugins
   */
-  "favorites.saveSeparated": true,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
     "vscode.typescript-language-features": 1,
   },
   "code-runner.saveFileBeforeRun": true,
-  "workbench.editor.showTabs": false,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 4,
-  "window.commandCenter": false,
   "workbench.editor.empty.hint": "hidden",
-  "window.density.editorTabHeight": "compact",
+  "workbench.editor.tabSizing": "shrink",
 }
