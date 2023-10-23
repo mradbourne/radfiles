@@ -183,9 +183,6 @@
   // Python
   "python.analysis.typeCheckingMode": "basic",
   "python.languageServer": "Pylance",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true,
   "[python]": {
     "editor.tabSize": 4,
     "editor.defaultFormatter": "ms-python.black-formatter",
