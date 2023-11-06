@@ -2,8 +2,8 @@
   /**
   * Disable telemetry
   */
+  "telemetry.telemetryLevel": "off",
   "redhat.telemetry.enabled": false,
-  "gitlens.telemetry.enabled": false,
   /**
   * Behaviour
   */
@@ -40,6 +40,7 @@
   "editor.fontSize": 14,
   "editor.lineHeight": 17,
   "editor.fontFamily": "JetBrains Mono, Cascadia Mono, Hack, Menlo, Consolas, Monospace",
+  "debug.console.fontFamily": "JetBrains Mono, Cascadia Mono, Hack, Menlo, Consolas, Monospace",
   "terminal.integrated.fontSize": 14,
   /**
   * GUI
@@ -59,6 +60,10 @@
   "editor.renderLineHighlight": "none",
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 4,
   "workbench.tree.indent": 18,
   "workbench.tree.renderIndentGuides": "always",
   "editor.cursorStyle": "line",
@@ -69,9 +74,13 @@
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
   "debug.toolBarLocation": "commandCenter",
+  "debug.enableStatusBarColor": false,
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.showInStatusBar": "always",
   "workbench.startupEditor": "none",
   "workbench.list.openMode": "doubleClick",
   "editor.cursorSurroundingLines": 12,
+  "editor.suggestSelection": "first",
   /**
   * File formatting
   */
@@ -89,7 +98,6 @@
   "files.autoSave": "onFocusChange",
   "workbench.list.multiSelectModifier": "alt",
   "workbench.settings.editor": "json",
-  "editor.suggestSelection": "first",
   /**
   * Git
   */
@@ -209,7 +217,14 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   /**
-  * vim
+  * Extensions
+  */
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "vscode.typescript-language-features": 1,
+  },
+  /**
+  * Extension: VSCodeVim
   */
   "vim.leader": "<space>",
   "vim.hlsearch": true,
@@ -408,35 +423,7 @@
     },
   ],
   /**
-  * Launch configs
+  * Misc extensions
   */
-  "launch": {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "chrome",
-        "request": "launch",
-        "name": "Chrome localhost:3000",
-        "url": "http://localhost:3000",
-        "webRoot": "${workspaceFolder}",
-        "runtimeArgs": [
-          "--user-data-dir=/Users/m/source/chrome-user-data",
-          "--proxy-server=localhost:8080",
-          "--auto-open-devtools-for-tabs"
-        ],
-      },
-    ]
-  },
-  /**
-  * Misc plugins
-  */
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1,
-    "vscode.typescript-language-features": 1,
-  },
   "code-runner.saveFileBeforeRun": true,
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 4,
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.editor.tabSizing": "shrink",
 }
