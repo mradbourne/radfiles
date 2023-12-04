@@ -1,4 +1,4 @@
-local tel = require('telescope.builtin')
+local telescope = require('telescope.builtin')
 
 -- Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -9,6 +9,9 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<C-m>l', ':Vex<CR><C-w>l')
 
 -- Telescope keymaps
-vim.keymap.set('n', '<Tab>', tel.buffers)
-vim.keymap.set('n', '<leader>f', tel.git_files)
-vim.keymap.set('n', '<leader>g', tel.live_grep)
+vim.keymap.set('n', '<Tab>', telescope.buffers)
+vim.keymap.set('n', '<leader>f', telescope.git_files)
+vim.keymap.set('n', '<leader>g', telescope.live_grep)
+
+-- Activity keymaps
+vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
