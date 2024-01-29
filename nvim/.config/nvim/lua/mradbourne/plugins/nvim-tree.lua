@@ -1,44 +1,24 @@
--- require("nvim-tree").setup({
---     sort_by = "case_sensitive",
---     view = {
---         width = 30,
---     },
---     renderer = {
---         group_empty = true,
---     },
---     filters = {
---         dotfiles = false,
---     },
--- })
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then return end
-
-vim.cmd([[
-  nnoremap - :NvimTreeToggle<CR>
-]])
-
--- local keymap = vim.keymap -- for conciseness
--- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.foldenable = false --                  " Disable folding at startup.
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
-local HEIGHT_RATIO = 0.8 -- You can change this
-local WIDTH_RATIO = 0.5  -- You can change this too
+local HEIGHT_RATIO = 0.8
+local WIDTH_RATIO = 0.5
 
 nvimtree.setup({
     disable_netrw = true,
     hijack_netrw = true,
     respect_buf_cwd = true,
     sync_root_with_cwd = true,
+    filters = {
+        dotfiles = false,
+        custom = { "^.git$" },
+    },
     view = {
-        relativenumber = true,
         float = {
             enable = true,
             open_win_config = function()
@@ -65,10 +45,4 @@ nvimtree.setup({
             return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
         end,
     },
-    -- filters = {
-    --   custom = { "^.git$" },
-    -- },
-    -- renderer = {
-    --   indent_width = 1,
-    -- },
 })
