@@ -34,3 +34,9 @@ vim.bo.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+
+-- Highlight
+vim.api.nvim_set_hl(0, 'NormalFloat', {
+  fg = 'none',
+  bg = 'none',
+})
