@@ -15,3 +15,9 @@ vim.keymap.set('n', '<leader>g', telescope.live_grep)
 
 -- Activity keymaps
 vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "NvimTree",
+    callback = function(args)
+        vim.keymap.set('n', '<Esc>', ':q<CR>', { buffer = args.buf })
+    end
+})
