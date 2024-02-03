@@ -1,0 +1,13 @@
+# Special parameters
+# https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html
+$1, $2, # Positional parameters.
+"$@"    # Array-like construct of all positional parameters, {$1, $2, $3 ...}.
+"$*"    # IFS expansion of all positional parameters, $1 $2 $3 ....
+$#      # Number of positional parameters.
+$-      # Current options set for the shell.
+$$      # PID of the current shell (not subshell).
+$_      # Most recent parameter.
+$IFS    # Input field separator.
+$?      # Most recent foreground pipeline exit status.
+$!      # PID of the most recent background command.
+$0      # Name of the shell or shell script.
