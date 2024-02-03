@@ -7,7 +7,7 @@
     {
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus"
+        "when": "sideBarFocus || auxiliaryBarFocus"
     },
     {
         "key": "f1",
@@ -15,9 +15,8 @@
     },
     {
         "key": "f1",
-        // "command": "git.openFile",
         "command": "gitlens.openWorkingFile",
-        "when": "sideBarFocus || isInDiffEditor"
+        "when": "sideBarFocus || auxiliaryBarFocus || isInDiffEditor"
     },
     {
         "key": "enter",
