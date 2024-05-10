@@ -44,7 +44,7 @@ require('lazy').setup({
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make',   cond = vim.fn.executable 'make' == 1 },
   'lewis6991/gitsigns.nvim',
-  'tomasiser/vim-code-dark', -- The only theme that matters
+  'Mofiqul/vscode.nvim', -- The only theme that matters
   'numToStr/Comment.nvim',   -- "gc" to comment visual regions/lines
   'tpope/vim-sleuth',        -- Detect tabstop and shiftwidth automatically
   'tpope/vim-vinegar'

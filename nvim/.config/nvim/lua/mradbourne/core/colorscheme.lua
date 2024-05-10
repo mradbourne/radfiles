@@ -1,3 +1,4 @@
 vim.o.termguicolors = true
 vim.o.background = 'dark'
-vim.cmd('colorscheme codedark')
+vim.cmd.colorscheme 'vscode'
+
