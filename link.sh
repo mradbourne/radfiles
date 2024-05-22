@@ -1,3 +1,4 @@
+stow bin
 stow cheat
 stow editorconfig
 stow git

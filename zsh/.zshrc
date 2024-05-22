@@ -13,6 +13,8 @@ unset file
 # https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#index-bindkey
 bindkey -e
 
+bindkey -s ^f "tmux-sessionizer\n"
+
 # Homebrew (does this need to be here?)
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
