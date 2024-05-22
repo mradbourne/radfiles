@@ -46,6 +46,7 @@
   * GUI
   */
   "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
   "editor.codeLens": true,
   "editor.accessibilitySupport": "off",
   "javascript.updateImportsOnFileMove.enabled": "prompt",
