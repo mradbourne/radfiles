@@ -4,6 +4,9 @@ git reset HEAD
 # Undo commit
 git reset --soft HEAD^
 
+# Revert file to specific commit
+git checkout <commit hash> -- file1/to/restore file2/to/restore
+
 # Delete branch
 git branch -d <local-branch>
 git branch -D <local-branch>
