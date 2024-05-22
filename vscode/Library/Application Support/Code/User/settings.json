@@ -270,6 +270,22 @@
     // Window management
     {
       "before": [
+        "ctrl+h",
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+l",
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    {
+      "before": [
         "ctrl+m",
         "h"
       ],
@@ -307,7 +323,7 @@
     // Vinegar
     {
       "before": [
-        "-"
+        "\\"
       ],
       "commands": [
         "workbench.files.action.focusFilesExplorer"
@@ -371,6 +387,7 @@
     {
       "before": [
         "<leader>",
+        "s",
         "f"
       ],
       "commands": [
@@ -380,7 +397,7 @@
     {
       "before": [
         "<leader>",
-        "b"
+        "<leader>"
       ],
       "commands": [
         "workbench.action.showAllEditors"
@@ -389,6 +406,7 @@
     {
       "before": [
         "<leader>",
+        "s",
         "g"
       ],
       "commands": [
@@ -398,6 +416,7 @@
     {
       "before": [
         "<leader>",
+        "s",
         "s"
       ],
       "commands": [
