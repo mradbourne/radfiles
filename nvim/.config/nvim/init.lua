@@ -262,11 +262,23 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          -- mappings = {
+          --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+          -- },
+          vimgrep_arguments = {
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '-u', -- A single -u won't respect .gitignore (etc.) files (--no-ignore).
+            '-u', -- Two -u flags will additionally search hidden files and directories (-./--hidden).
+            -- '-u', -- Three -u flags will additionally search binary files (--binary).
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
