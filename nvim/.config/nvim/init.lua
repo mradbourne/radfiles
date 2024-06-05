@@ -300,8 +300,15 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', function()
-        builtin.git_files { show_untracked = true }
+        builtin.git_files {
+          show_untracked = true,
+        }
       end, { desc = '[S]earch Git [F]iles' })
+      vim.keymap.set('n', '<leader>sc', function()
+        builtin.git_status {
+          initial_mode = 'normal',
+        }
+      end, { desc = '[S]earch [C]hanged Files' })
       vim.keymap.set('n', '<leader>sa', builtin.find_files, { desc = '[S]earch [A]ll Files' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
