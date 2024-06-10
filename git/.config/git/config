@@ -83,6 +83,7 @@ set-upstream = !git branch --set-upstream-to=origin/$(git symbolic-ref --short H
 
 # Set tracking information for the current branch and push it
 push-and-set-upstream = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
+pasu = push-and-set-upstream
 
 [apply]
 
