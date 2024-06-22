@@ -27,9 +27,9 @@
   "security.workspace.trust.untrustedFiles": "open",
   "security.workspace.trust.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
   "search.quickOpen.includeHistory": false,
   "workbench.quickOpen.preserveInput": true,
   "editor.inlineSuggest.enabled": true,
@@ -59,6 +59,7 @@
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "off",
   "editor.renderLineHighlight": "none",
+  "workbench.activityBar.location": "top",
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.empty.hint": "hidden",
@@ -108,9 +109,7 @@
   "git.openRepositoryInParentFolders": "never",
   "gitlens.hovers.enabled": false,
   "gitlens.statusBar.enabled": true,
-  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
-  "gitlens.graph.layout": "panel",
   "gitlens.codeLens.enabled": false,
   "gitlens.defaultGravatarsStyle": "identicon",
   "gitlens.views.repositories.showBranchComparison": false,
@@ -234,216 +233,11 @@
   "vim.useCtrlKeys": true,
   "vim.highlightedyank.enable": true,
   "vim.showMarksInGutter": true,
-  "vim.normalModeKeyBindings": [
-    // Fix default functionality
-    {
-      "before": [
-        "ctrl+o"
-      ],
-      "commands": [
-        "workbench.action.navigateBack"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+i"
-      ],
-      "commands": [
-        "workbench.action.navigateForward"
-      ]
-    },
-    {
-      "before": [
-        "u"
-      ],
-      "commands": [
-        "undo"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+r"
-      ],
-      "commands": [
-        "redo"
-      ]
-    },
-    // Window management
-    {
-      "before": [
-        "ctrl+h",
-      ],
-      "commands": [
-        "workbench.action.focusLeftGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+l",
-      ],
-      "commands": [
-        "workbench.action.focusRightGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+m",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToLeftGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+m",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToRightGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+m",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToAboveGroup"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+m",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToBelowGroup"
-      ]
-    },
-    // Vinegar
-    {
-      "before": [
-        "\\"
-      ],
-      "commands": [
-        "workbench.files.action.focusFilesExplorer"
-      ]
-    },
-    // LSP
-    {
-      "before": [
-        "g",
-        "D"
-      ],
-      "commands": [
-        "editor.action.revealDeclaration"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "d"
-      ],
-      "commands": [
-        "editor.action.revealDefinition"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "t"
-      ],
-      "commands": [
-        "editor.action.goToTypeDefinition"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ]
-    },
-    {
-      "before": [
-        "K",
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    },
-    // Telescope
-    {
-      "before": [
-        "<leader>",
-        "s",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "<leader>"
-      ],
-      "commands": [
-        "workbench.action.showAllEditors"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "s",
-        "g"
-      ],
-      "commands": [
-        "workbench.action.findInFiles"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "s",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.showAllSymbols"
-      ]
-    },
-    // Misc
-    {
-      "before": [
-        "ctrl+k",
-      ],
-      "commands": [
-        "workbench.action.openPreviousRecentlyUsedEditor"
-      ]
-    },
-    {
-      "before": [
-        "ctrl+j",
-      ],
-      "commands": [
-        "workbench.action.openNextRecentlyUsedEditor"
-      ]
-    },
-  ],
+  "vim.vimrc.enable": true,
   /**
   * Misc extensions
   */
-  "code-runner.saveFileBeforeRun": true,
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.configureOnOpen": false,
+  "github.copilot.editor.enableAutoCompletions": true,
 }

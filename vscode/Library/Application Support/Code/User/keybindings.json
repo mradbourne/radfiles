@@ -10,6 +10,11 @@
         "when": "sideBarFocus || auxiliaryBarFocus"
     },
     {
+        "key": "\\",
+        "command": "workbench.action.closeSidebar",
+        "when": "filesExplorerFocus"
+    },
+    {
         "key": "f1",
         "command": "-workbench.action.showCommands",
     },
