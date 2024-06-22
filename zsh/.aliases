@@ -1,12 +1,13 @@
-# Go home
+# Navigation
 alias sr="cd ~/source/repos/"
+alias j='cd $(find ~/source/repos ~ -maxdepth 1 -type d | fzf)'
 
 # Shortcuts
 alias g="git"
 alias co="fzf-git-checkout"
 alias sp="fzf-git-stash-pop"
 alias h="history"
-alias j="jobs"
+alias js="jobs"
 alias lg="lazygit"
 
 # Source zsh runcom
