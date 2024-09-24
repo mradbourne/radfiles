@@ -59,7 +59,6 @@
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "off",
   "editor.renderLineHighlight": "none",
-  "workbench.activityBar.location": "top",
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.empty.hint": "hidden",
@@ -240,4 +239,5 @@
   "cmake.showOptionsMovedNotification": false,
   "cmake.configureOnOpen": false,
   "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Default Dark+",
 }
