@@ -12,6 +12,7 @@ unset file
 # Set emacs keymap
 # https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#index-bindkey
 bindkey -e
+bindkey "^[[3~" delete-char
 
 # Homebrew (does this need to be here?)
 eval "$(/opt/homebrew/bin/brew shellenv)"
