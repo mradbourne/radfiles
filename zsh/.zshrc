@@ -21,7 +21,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init --path)"
 
 # ZSH plugins
-for plugin_name in {zsh-syntax-highlighting,zsh-autocomplete}; do
+for plugin_name in {zsh-syntax-highlighting,}; do
     plugin_path=~/.config/zsh/plugins/$plugin_name/$plugin_name.plugin.zsh
     [ -r "$plugin_path" ] && [ -f "$plugin_path" ] && source $plugin_path
 done
