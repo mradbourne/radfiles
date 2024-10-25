@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z "$TMUX" ]; then
+    echo "Not running in tmux. Exiting."
+    exit 1
+fi
+
+if tmux list-panes -F '#{pane_title}' | grep -q '^panel$'; then
+    PANE_ID=$(tmux list-panes -F '#{pane_id} #{pane_title}' | grep ' panel$' | cut -d' ' -f1)
+    CURRENT_PANE=$(tmux display-message -p '#{pane_id}')
+    if [ "$PANE_ID" = "$CURRENT_PANE" ]; then
+        tmux kill-pane -t "$PANE_ID"
+        exit 0
+    fi
+    tmux select-pane -t "$PANE_ID"
+else
+    tmux split-window -v -l 18
+    tmux select-pane -T panel
+fi
