@@ -26,4 +26,3 @@ for plugin_name in {zsh-syntax-highlighting,}; do
     [ -r "$plugin_path" ] && [ -f "$plugin_path" ] && source $plugin_path
 done
 unset plugin_name plugin_path
-# -------- End of intended content --------

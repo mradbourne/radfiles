@@ -9,3 +9,7 @@ stow redshift
 stow tmux
 stow vscode
 stow zsh
+
+if [ ! -f ~/.zshrc ]; then
+    echo "source ~/.zshrc-extra" > ~/.zshrc
+fi
