@@ -1,9 +1,7 @@
-" Actions list: https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
-
 " Options
 let mapleader = " "
 set clipboard+=unnamed
-set scrolloff=8
+set scrolloff=99
 set number
 set hlsearch
 set incsearch
@@ -18,17 +16,18 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'dbakker/vim-paragraph-motion'
 
-" Keymaps
-nmap <C-]> <Action>(GotoDeclaration)
+" Fix defaults
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
-nmap - <Action>(ActivateProjectToolWindow)
-nmap K <Action>(ShowErrorDescription)
-
-nmap <leader>f <Action>(GotoFile)
-nmap <leader>e <Action>(RecentFiles)
+" Telescope
+nmap <leader>p <Action>(GotoFile)
+nmap <leader>e <Action>(Switcher)
 nmap <leader>g <Action>(FindInPath)
 nmap <leader>s <Action>(GotoSymbol)
 
-nmap <leader>v <Action>(Git.Menu)
+" LSP
+nmap K <Action>(ShowHoverInfo)
+
+" Sidebar panes
+nmap \ <Action>(ActivateProjectToolWindow)
