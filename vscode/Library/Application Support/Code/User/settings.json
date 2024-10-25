@@ -46,7 +46,6 @@
   * GUI
   */
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "relative",
   "editor.codeLens": true,
   "editor.accessibilitySupport": "off",
   "javascript.updateImportsOnFileMove.enabled": "prompt",
@@ -59,6 +58,7 @@
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "off",
   "editor.renderLineHighlight": "none",
+  "workbench.editor.revealIfOpen": true,
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.empty.hint": "hidden",
@@ -80,7 +80,7 @@
   "debug.showInStatusBar": "always",
   "workbench.startupEditor": "none",
   "workbench.list.openMode": "doubleClick",
-  "editor.cursorSurroundingLines": 12,
+  "editor.cursorSurroundingLines": 99,
   "editor.suggestSelection": "first",
   /**
   * File formatting
@@ -108,6 +108,7 @@
   "git.openRepositoryInParentFolders": "never",
   "gitlens.hovers.enabled": false,
   "gitlens.statusBar.enabled": true,
+  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.codeLens.enabled": false,
   "gitlens.defaultGravatarsStyle": "identicon",
@@ -239,5 +240,4 @@
   "cmake.showOptionsMovedNotification": false,
   "cmake.configureOnOpen": false,
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.colorTheme": "Default Dark+",
 }

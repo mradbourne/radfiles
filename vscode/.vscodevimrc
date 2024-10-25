@@ -16,10 +16,10 @@ nnoremap <C-m>k workbench.action.moveEditorToAboveGroup
 nnoremap <C-m>j workbench.action.moveEditorToBelowGroup
 
 " Telescope
-nnoremap <leader>sf workbench.action.quickOpen
-nnoremap <leader><leader> workbench.action.showAllEditors
-nnoremap <leader>sg workbench.action.findInFiles
-nnoremap <leader>ss workbench.action.showAllSymbols
+nnoremap <leader>p workbench.action.quickOpen
+nnoremap <leader>e workbench.action.showAllEditors
+nnoremap <leader>g workbench.action.findInFiles
+nnoremap <leader>s workbench.action.showAllSymbols
 
 " LSP
 nnoremap gD editor.action.revealDeclaration
