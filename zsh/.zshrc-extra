@@ -1,5 +1,11 @@
 # Set prompt
-PS1="%F{5}%2~%f %# "
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats ' %F{3}%s(%b)%f'
+precmd () {
+    vcs_info
+}
+setopt prompt_subst
+PS1='%F{5}%2~%f$vcs_info_msg_0_ %# '
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
