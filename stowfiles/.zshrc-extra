@@ -1,6 +1,6 @@
 # Set prompt
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats ' %F{3}%s(%b)%f'
+zstyle ':vcs_info:*' formats ' %F{8}%b%f'
 precmd () {
     vcs_info
 }

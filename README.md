@@ -3,11 +3,11 @@ Like dotfiles but better.
 
 First, create a gitconfig secrets file:
 ```
-cp git/.config/git/config-secrets.example git/.config/git/config-secrets
+cp stowfiles/.config/git/config-secrets.example stowfiles/.config/git/config-secrets
 ```
 ...and update the details.
 
-Then run the link script:
+Then run the bootstrap script:
 ```
-./link.sh
+./bootstrap.sh
 ```
