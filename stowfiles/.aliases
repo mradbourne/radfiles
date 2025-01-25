@@ -11,7 +11,7 @@ alias js="jobs"
 alias lg="lazygit"
 
 # Source zsh runcom
-alias s="source ~/.zshrc && echo Sourced ~/.zshrc"
+alias s="source ~/.bashrc && echo Sourced ~/.bashrc"
 
 # Detect which `ls` flavor is in use
 if ls --color >/dev/null 2>&1; then # GNU `ls`

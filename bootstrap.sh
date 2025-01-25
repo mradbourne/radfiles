@@ -1,5 +1,5 @@
 stow stowfiles
 
-if [ ! -f ~/.zshrc ]; then
-    echo "source ~/.zshrc-extra" > ~/.zshrc
+if [ ! -f ~/.bashrc ]; then
+    echo "source ~/.bashrc-extra" > ~/.bashrc
 fi
