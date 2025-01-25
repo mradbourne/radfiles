@@ -1,0 +1,9 @@
+MAGENTA="\[\033[00;35m\]"
+GREEN="\[\033[00;32m\]"
+ENDCOLOR="\[\033[00;0m\]"
+
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1="$MAGENTA\u@\h$ENDCOLOR:$GREEN\W$ENDCOLOR\$(git_branch)\$ "
