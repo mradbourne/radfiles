@@ -1,0 +1,2 @@
+# Copy a file from local to remote
+scp file.txt username@remote_host:/path/to/destination/
