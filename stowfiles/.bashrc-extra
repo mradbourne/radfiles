@@ -6,12 +6,16 @@ for file in ~/.{prompt,path,exports,functions,aliases,extra}; do
 done
 unset file
 
-# Homebrew (does this need to be here?)
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# pyenv
-eval "$(pyenv init --path)"
-
 if [ -f ~/.config/bash/plugins/git-completion.bash ]; then
     source ~/.config/bash/plugins/git-completion.bash
+fi
+
+# Homebrew
+if command -v brew &> /dev/null; then
+    eval "$(brew shellenv)"
+fi
+
+# pyenv
+if command -v pyenv &> /dev/null; then
+    eval "$(pyenv init --path)"
 fi
