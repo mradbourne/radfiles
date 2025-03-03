@@ -1,6 +1,6 @@
 # Navigation
 alias sr="cd ~/source/repos/"
-alias j='cd $(find ~/source/repos ~ -maxdepth 1 -type d | fzf)'
+alias j="jump"
 
 # Shortcuts
 alias g="git"
