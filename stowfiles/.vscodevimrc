@@ -8,6 +8,8 @@ nnoremap <C-r> redo
 nnoremap <leader>cl workbench.action.editor.changeLanguageMode
 
 " Window management
+nnoremap <C-w> workbench.action.closeActiveEditor
+nnoremap <C-W> workbench.action.closeOtherEditors
 nnoremap <C-h> workbench.action.focusLeftGroup
 nnoremap <C-l> workbench.action.focusRightGroup
 nnoremap <C-m>h workbench.action.moveEditorToLeftGroup
@@ -36,6 +38,3 @@ nnoremap \ workbench.files.action.focusFilesExplorer
 nnoremap <C-k> workbench.action.openPreviousRecentlyUsedEditor
 nnoremap <C-j> workbench.action.openNextRecentlyUsedEditor
 nnoremap <leader>f editor.action.formatDocument
-
-" Plugins
-nnoremap <leader>co workbench.panel.chat.view.copilot.focus
