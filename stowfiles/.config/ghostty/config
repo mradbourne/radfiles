@@ -1,3 +1,5 @@
 theme = Dark+
 font-size = 14
 window-padding-x = 8
+
+macos-option-as-alt = left
