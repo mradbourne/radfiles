@@ -206,3 +206,6 @@ insteadOf = "gist:"
 
 [include]
 path = "config-secrets"
+
+[init]
+defaultBranch = main
