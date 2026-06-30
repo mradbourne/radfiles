@@ -1,6 +1,6 @@
 # Navigation
 alias sr="cd ~/source/repos/"
-alias j="jump"
+alias w="jump"
 
 # Shortcuts
 alias g="git"
