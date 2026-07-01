@@ -1,14 +1,9 @@
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{prompt,path,exports,functions,aliases,extra}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file"
+# ~/.path is used to extend `$PATH`.
+# ~/.extra is used for other settings you don’t want to commit.
+for file in $HOME/.{path,exports,functions,aliases,extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && . "$file"
 done
 unset file
-
-if [ -f ~/.config/bash/plugins/git-completion.bash ]; then
-    source ~/.config/bash/plugins/git-completion.bash
-fi
 
 # Homebrew
 if command -v brew &> /dev/null; then
