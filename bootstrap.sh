@@ -20,11 +20,16 @@ if ! command -v stow &> /dev/null; then
 fi
 stow stowfiles
 
-# Source .bashrc-extra, which is the entry point for all other dotfiles
-if [ ! -f ~/.bashrc ]; then
-    echo "source ~/.bashrc-extra" > ~/.bashrc
+# Source .bash_profile-extra and .bashrc-extra, which are the entry points for all other dotfiles
+if [ ! -f ~/.bash_profile ]; then
+    echo ". ~/.bash_profile-extra" > ~/.bashrc
 else
-    echo "You already have a .bashrc file. Please add 'source ~/.bashrc-extra' to it."
+    echo "You already have a .bash_profile file. Please add '. ~/.bash_profile-extra' to it."
+fi
+if [ ! -f ~/.bashrc ]; then
+    echo ". ~/.bashrc-extra" > ~/.bashrc
+else
+    echo "You already have a .bashrc file. Please add '. ~/.bashrc-extra' to it."
 fi
 
 echo "Consider installing pyenv"
