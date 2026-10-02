@@ -1,8 +1,0 @@
-for file in \
-    "$HOME/.prompt" \
-    "$HOME/.bashrc" \
-    "$HOME/.config/bash/plugins/git-completion.bash"
-do
-    [ -r "$file" ] && [ -f "$file" ] && . "$file"
-done
-unset file
