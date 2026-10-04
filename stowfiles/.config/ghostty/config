@@ -3,3 +3,6 @@ font-size = 14
 window-padding-x = 8
 
 macos-option-as-alt = true
+
+cursor-style = block
+shell-integration-features = no-cursor
