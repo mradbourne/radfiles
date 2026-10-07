@@ -1,10 +1,14 @@
-MAGENTA="\[\033[00;35m\]"
-GREEN="\[\033[00;32m\]"
-GREY="\[\033[00;90m\]"
-ENDCOLOR="\[\033[00;0m\]"
-
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1="$MAGENTA\u@\h$ENDCOLOR:$GREEN\W$GREY\$(git_branch)$ENDCOLOR\$ "
+# Enable prompt substitution so command substitutions like $(git_branch)
+# are expanded when the prompt is rendered, not when this file is sourced.
+setopt prompt_subst
+
+# user@host:dir(branch)$
+#   %n = user,%m = short hostname, %1~ = current directory name (~ for home),
+#   %F{8} = grey, %(!.#.$) = '#' when root, otherwise '$'
+# Single quotes keep the prompt string literal until display time, so
+# $(git_branch) is evaluated each redraw while `prompt_subst` is enabled.
+PROMPT='%F{magenta}%n@%m%f:%F{green}%1~%F{8}$(git_branch)%f%(!.#.$) '

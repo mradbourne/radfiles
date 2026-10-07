@@ -1,6 +1,10 @@
+# `path` is zsh's array tied to $PATH; -U keeps entries unique
+# (avoids duplicates when nested shells re-run the PATH setup below).
+typeset -U path
+
 # ~/.path is used to extend `$PATH`.
 # ~/.extra is used for other settings you don’t want to commit.
-for file in $HOME/.{path,exports,functions,aliases,extra}; do
+for file in $HOME/.{path,exports,functions,aliases,prompt,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && . "$file"
 done
 unset file
@@ -13,6 +17,6 @@ fi
 # pyenv
 if command -v pyenv &> /dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
-    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+    [[ -d $PYENV_ROOT/bin ]] && path=($PYENV_ROOT/bin $path)
+    eval "$(pyenv init - zsh)"
 fi
